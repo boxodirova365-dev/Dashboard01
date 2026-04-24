@@ -1,0 +1,184 @@
+:root {
+  --primary: #5932EA;
+  --bg: #FAFBFF;
+  --text-gray: #B5B7C0;
+  --text-dark: #292D32;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  background: #FFFFFF;
+  padding: 30px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.02);
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.logo-icon { font-size: 24px; }
+.logo-text h2 { margin: 0; font-size: 22px; }
+.logo-text p { margin: 0; font-size: 10px; color: var(--text-gray); }
+
+.nav-menu ul { list-style: none; padding: 0; }
+
+.nav-menu li {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  color: #9197B3;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Mishka olib borganda ko'k bo'lishi */
+.nav-menu li:hover, .nav-menu li.active {
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
+
+/* Main Content */
+.main-content { flex: 1; padding: 40px 50px; }
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.top-search {
+  background: #FFFFFF;
+  padding: 10px 15px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.top-search input, .table-search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding-left: 10px;
+}
+
+/* Content Card */
+.content-card {
+  background: #FFFFFF;
+  border-radius: 30px;
+  padding: 35px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.active-members { color: #16C098; font-size: 14px; margin-top: 5px; }
+
+.table-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.table-search {
+  background: #F9FBFF;
+  padding: 10px 15px;
+  border-radius: 12px;
+}
+
+/* Short by section */
+.sort-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sort-label { color: #7E7E7E; font-size: 14px; }
+
+.sort-box {
+  background: #F9FBFF;
+  padding: 10px 15px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort-text { font-weight: 600; color: var(--text-dark); font-size: 14px; }
+.sort-arrow { color: #7E7E7E; font-size: 12px; }
+
+/* Table */
+.customers-table { width: 100%; border-collapse: collapse; }
+
+.customers-table th {
+  text-align: left;
+  color: var(--text-gray);
+  padding-bottom: 15px;
+  border-bottom: 1px solid #EEEEEE;
+  font-weight: 500;
+}
+
+.customers-table td {
+  padding: 24px 0;
+  border-bottom: 1px solid #EEEEEE;
+  font-size: 14px;
+}
+
+/* Status Pill */
+.status-pill {
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.status-pill.active { background: #E1F7E3; color: #00B087; border: 1px solid #00B087; }
+.status-pill.inactive { background: #FFEDED; color: #DF0404; border: 1px solid #DF0404; }
+
+/* Footer */
+.pagination-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 35px;
+  color: var(--text-gray);
+  font-size: 14px;
+}
+
+.page-buttons { display: flex; gap: 8px; }
+
+.page-buttons button {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #EEEEEE;
+  background: #F5F5F5;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.page-buttons button.active {
+  background: var(--primary);
+  color: #FFF;
+  border-color: var(--primary);
+}
